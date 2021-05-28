@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position Practice</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        /*CSS reset settings here*/
+        
+        * {
+            margin: 10px;
+            padding: 10px;
+        }
+        
+        #wrapper {
+            width: 1100px;
+            background-color: silver;
+            margin: 0px auto;
+        }
+        
+        #header {
+            min-height: 150px;
+            background-color: green;
+        }
+        
+        #navigation {
+            min-height: 300px;
+            width: 200px;
+            background-color: blue;
+            display: inline-block;
+        }
+        
+        #main_content {
+            min-height: 40px;
+            width: 810px;
+            background-color: red;
+            display: inline-block;
+            vertical-align: top;
+        }
+        
+        .subcontents {
+            min-height: 200px;
+            width: 210px;
+            background-color: yellow;
+            display: inline-block;
+        }
+        
+        #advertisement {
+            min-height: 120px;
+            width: 720px;
+            background-color: purple;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="header"></div>
+        <div id="navigation"></div>
+        <div id="main_content">
+            <div class="subcontents"></div>
+            <div class="subcontents"></div>
+            <div class="subcontents"></div>
+            <div id="advertisement"></div>
+        </div>
+    </div>
+    <!-- end of wrapper -->
+
+</body>
+
+</html>
