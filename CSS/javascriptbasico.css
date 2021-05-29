@@ -4,29 +4,29 @@
 }
 
 #container {
-    width: 980px;
+    width: 970px;
     background-color: rgb(210, 227, 233);
     margin: 10px auto;
-    padding: 10px;
+    padding: 20px;
 }
 
 #header {
     min-height: 30px;
     border-radius: 10px;
     background-color: slategray;
-    margin: 10px auto;
+    margin: 5px auto;
     padding: 15px;
     color: rgb(243, 243, 234)
 }
 
 #navigation {
-    min-height: 280px;
+    min-height: 270px;
     border-radius: 10px;
-    width: 90px;
+    width: 80px;
     background-color: lightsteelblue;
     display: inline-block;
     margin: 10px auto;
-    margin-right: 15px;
+    margin-right: 10px;
     padding: 40px;
 }
 
@@ -54,12 +54,19 @@ a {
     padding: 30px;
 }
 
+#listado {
+    padding-left: 15px;
+    list-style-type: none;
+}
+
 #footer {
-    min-height: 50px;
+    min-height: 15px;
     border-radius: 10px;
-    width: 970px;
+    width: 930px;
     background-color: rgb(182, 153, 182);
     margin-right: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
+    padding: 20px;
+    color: darkslategrey
 }
