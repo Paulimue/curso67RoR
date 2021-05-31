@@ -16,6 +16,7 @@
     background: linear-gradient(to bottom, rgb(190, 192, 192), rgb(230, 228, 228));
     padding-right: 20px;
     padding-left: 25px;
+    margin-bottom: 20px;
 }
 
 #nombre {
@@ -39,12 +40,15 @@
 }
 
 #photo {
-    padding: 20px;
-    margin: auto 15px;
+    border: gainsboro 5px solid;
+    display: inline-block;
+    margin-left: 30px;
+    margin-bottom: 20px;
+    padding: auto 0px;
 }
 
 #main_content {
-    min-height: 280px;
+    min-height: 294px;
     width: 450px;
     background: linear-gradient(to right, rgb(210, 212, 212), rgb(164, 167, 167));
     display: inline-block;
