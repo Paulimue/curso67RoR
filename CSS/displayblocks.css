@@ -1,0 +1,44 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#container {
+    width: 870px;
+    background-color: lightgoldenrodyellow;
+    padding: 20px;
+    margin: 20px auto;
+}
+
+#header {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#Displayblocks {
+    display: inline-block;
+}
+
+#contenido {
+    text-align: center;
+}
+
+.gatos1 {
+    display: inline-block;
+    border: black 3px solid;
+    background-color: blueviolet;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.gatos2 {
+    display: inline-block;
+    background-color: darksalmon;
+    border: black 3px solid;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
