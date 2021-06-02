@@ -1,0 +1,145 @@
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    #container {
+        width: 970px;
+        background: linear-gradient(to top, #5588b4, #124670);
+        margin: 20px auto;
+    }
+    /*Header, logo y buscador*/
+    
+    #logo {
+        padding: 20px;
+        display: inline-block;
+    }
+    
+    #bloquetopright {
+        width: 300px;
+        vertical-align: top;
+        text-align: right;
+        display: inline-block;
+        padding-top: 10px;
+        padding-left: 270px;
+    }
+    
+    #sizeselector {
+        display: inline-block;
+        color: whitesmoke;
+        margin-bottom: 10px;
+    }
+    
+    #buscar {
+        background-color: dimgray;
+        display: inline-block;
+        width: 220px;
+        padding: 10px;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 1px 1px 1px 1px black;
+    }
+    /*navbar*/
+    
+    #navbar {
+        display: inline-block;
+        background-color: rgb(44, 132, 204);
+        width: 800px;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 1px 1px 1px 1px rgb(46, 46, 46);
+        margin-left: 100px;
+    }
+    
+    .navbar {
+        display: inline-block;
+        padding: 10px;
+        color: cornsilk;
+        margin-left: 30px;
+    }
+    /*menu y texto*/
+    
+    #menu {
+        display: inline-block;
+        width: 150px;
+        margin-left: 100px;
+        padding: 20px;
+        color: cornsilk;
+        vertical-align: top;
+    }
+    
+    .link {
+        color: cornsilk;
+    }
+    
+    #estilotexto1 {
+        margin-top: 10px;
+        vertical-align: top;
+        margin-right: 30px;
+        width: 600px;
+        padding: 10px;
+        display: inline-block;
+        font-size: 16px;
+        color: cornsilk;
+    }
+    
+    #estilotexto2 {
+        width: 330px;
+        padding: 10px;
+        display: inline-block;
+        font-size: 18px;
+        color: gold;
+        text-align: center;
+        margin-left: 120px;
+        line-height: 30px;
+        font-style: italic;
+    }
+    /*franja blanca*/
+    
+    #franjablanca {
+        display: inline-block;
+        width: 930px;
+        height: auto;
+        background-color: rgb(240, 240, 240);
+        padding: 20px;
+        vertical-align: top;
+    }
+    
+    #linea {
+        height: 3px;
+        width: 270px;
+        background-color: rgb(23, 139, 233);
+        text-align: center;
+        display: inline-block;
+        vertical-align: top;
+    }
+    
+    #columnas {
+        width: 270px;
+        display: inline-block;
+        margin-left: 120px;
+        text-align: center;
+        vertical-align: top;
+    }
+    
+    .listado {
+        color: rgb(44, 132, 204);
+    }
+    /*footer*/
+    
+    .txtfoot {
+        display: inline-block;
+        margin: 30px;
+        text-align: center;
+        color: rgb(199, 198, 194);
+        font-style: normal;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    #copy {
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        color: rgb(199, 198, 194);
+        font-size: 9pt;
+        padding-bottom: 10px;
+    }
