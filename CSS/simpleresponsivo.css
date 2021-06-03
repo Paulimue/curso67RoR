@@ -1,0 +1,66 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#container {
+    padding: 10px;
+}
+
+.fila1 {
+    background-color: burlywood;
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid gray;
+}
+
+.fila2 {
+    background-color: lightgrey;
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid gray;
+}
+
+.fila3 {
+    background-color: lemonchiffon;
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid gray;
+}
+
+@media only screen and (min-width: 1024px) {
+    .grande {
+        width: 25%;
+        color: indigo;
+    }
+    .mediano {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 481px) {
+    .mediano {
+        width: 50%;
+        color: hotpink;
+    }
+    .grande {
+        display: none;
+    }
+    .pequeño {
+        display: none;
+    }
+}
+
+@media only screen and (max-width:480px) {
+    .pequeño {
+        width: 100%;
+        color: green;
+    }
+    .mediano {
+        display: none;
+    }
+    .grande {
+        display: none;
+    }
+}
