@@ -29,6 +29,10 @@
     border: 1px solid gray;
 }
 
+span {
+    font-weight: bold;
+}
+
 @media only screen and (min-width: 1024px) {
     .grande {
         width: 25%;
@@ -37,9 +41,12 @@
     .mediano {
         display: none;
     }
+    .pequeño {
+        display: none;
+    }
 }
 
-@media only screen and (min-width: 481px) {
+@media only screen and (min-width: 481px) and (max-width: 1023px) {
     .mediano {
         width: 50%;
         color: hotpink;
