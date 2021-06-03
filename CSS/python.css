@@ -125,6 +125,12 @@
     .listado {
         color: rgb(44, 132, 204);
     }
+    
+    #puntos {
+        list-style-type: square;
+        color: rgb(44, 132, 204);
+        padding-left: 30px;
+    }
     /*footer*/
     
     .txtfoot {
