@@ -4,25 +4,21 @@
 }
 
 .container {
-    background-color: silver;
-    width: 800px;
+    background-color: gray;
     padding: 15px;
 }
 
 #div1 {
-    background-color: aquamarine;
-    width: auto;
+    background-color: #3d77ce;
     height: 200px;
 }
 
 #div2 {
-    background-color: bisque;
-    width: auto;
+    background-color: #3d77ce;
     height: 200px;
 }
 
 #div3 {
-    background-color: cornflowerblue;
-    width: auto;
+    background-color: #3d77ce;
     height: 200px;
 }
