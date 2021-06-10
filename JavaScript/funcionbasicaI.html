@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Función Básica I</title>
+    <script>
+        /* ejercicio 1*/
+        function a() {
+            return 35;
+        }
+        console.log(a())
+            /*console.log(35)
+            resp.: 35 */
+
+        /* ejercicio 2*/
+        function a() {
+            return 4;
+        }
+        console.log(a() + a());
+        /* console.log (a(4) + a(4))
+        console.log(8)
+        resp.: 8 */
+
+        /* ejercicio 3*/
+        function a(b) {
+            return b;
+        }
+        console.log(a(2) + a(4));
+        /* console.log(6)
+        resp.: 6 */
+
+        /* ejercicio 4*/
+        function a(b) {    
+            console.log(b);
+            return b * 3;
+        }
+        console.log(a(3));
+        /* console.log(a(3))
+        console.log(b(3))
+        return b*3 --- 3*3=9
+        console.log(a(9))
+        resp.: 3,9 */
+
+        /* ejercicio 5*/
+        function a(b) {
+            return b * 4;
+            console.log(b);
+        }
+        console.log(a(10));
+        /* console.log(a(10))
+        return b*4 --- 10*4=40
+        console.log(b(40))
+        resp.: 40 */
+
+        /* ejercicio 6*/
+        function a(b) {
+            if (b < 10) {
+                return 2;
+            }    
+            else {
+                return 4;
+            }
+            console.log(b);
+        }
+        console.log(a(15));
+        /* a(b=15)
+        b<10 --- 15<10 falso
+        pasa a else y retorna 4
+        Console.log(b) --- console.log(4)
+        resp.: 4 */
+
+        /* ejercicio 7*/
+        function a(b, c) {
+            return b * c;
+        }
+        console.log(10, 3);
+        console.log(a(3, 10));
+        /* a(3,10)
+        retorna b*c ---- 3*10=30
+        console.log(10,3) y console.log(30)----el retorno a
+        resp.: 10,3,30 */
+
+        /* ejercicio 8*/
+        function a(b) {
+            for (var i = 0; i < 10; i++) {
+                console.log(i);
+            }
+            return i;
+        }
+        console.log(3);
+        console.log(4);
+        /* nunca llama a funcion a
+        resp.: 3,4 */
+
+        /*ejercicio 9*/
+        function a() {
+            for (var i = 0; i < 10; i++) {
+                i = i + 2;
+                console.log(i);
+            }
+        }
+        a();
+        /* entra a for--- var i = 0 --- 0 < 10 SI --- i = 0+2 --- i = 2
+        console.log(2)
+        incrementa i --- var i = 3 --- 3 < 10 SI --- i = 3+2 --- i = 5
+        console.log(5)
+        incrementa i --- var i = 6 --- 6 < 10 SI --- i = 6+2 --- i = 8
+        console.log(8)
+        incrementa i --- var i = 9 --- 9 < 10 SI --- i = 9+2 --- i = 11
+        console.log(11)
+        incrementa i --- var i = 12 --- 12 < 10 NO --- termina for
+        resp.: 2,5,8,11 */
+
+        /*ejercicio 10*/
+        function a(b, c) {
+            for (var i = b; i < c; i++) {
+                console.log(i);
+            }
+            return b * c;
+        }
+        a(0, 10);
+        console.log(a(0, 10));
+        /*funtion a(b,c) --- (0,10)
+        entra a for --- var i = 0 --- 0 < 10 SI --- i = 0
+        console.log(0)
+        incrementa i --- var i = 1 --- 1 < 10 SI ---  i = 1
+        console.log(1)
+        incrementa i --- var i = 2 --- 2 < 10 SI ---  i = 2
+        console.log(2)
+        incrementa i --- var i = 3 --- 3 < 10 SI ---  i = 3
+        console.log(3)
+        incrementa i --- var i = 4 --- 4 < 10 SI ---  i = 4
+        console.log(4)
+        incrementa i --- var i = 5 --- 5 < 10 SI ---  i = 5
+        console.log(5)
+        incrementa i --- var i = 6 --- 6 < 10 SI ---  i = 6
+        console.log(6)
+        incrementa i --- var i = 7 --- 7 < 10 SI ---  i = 7
+        console.log(7)
+        incrementa i --- var i = 8 --- 8 < 10 SI ---  i = 8
+        console.log(8)
+        incrementa i --- var i = 9 --- 9 < 10 SI ---  i = 9
+        console.log(9)
+        incrementa i --- var i = 10 --- 10 < 10 NO ---  termina for
+        pasa a retorno b*c --- 0*10=0 --- console.log(a(0))
+        resp.: 0,1,2,3,4,5,6,7,8,9,0 */
+
+        /* ejercicio 11 */
+        function a() {
+            for (var i = 0; i < 10; i++) {
+                for (var j = 0; j < 10; j++) {
+                    console.log(j);
+                }
+                console.log(i);
+            }
+        }
+        /* nunca llama a funcion a
+        resp.: undefined*/
+
+        /*ejercicio 12 */
+        function a() {
+            for (var i = 0; i < 10; i++) {
+                for (var j = 0; j < 10; j++) {
+                    console.log(i, j);
+                }
+                console.log(j, i);
+            }
+        }
+        /* nunca llama a funcion a
+        resp.: undefined*/
+
+        /*ejercicio 13 */
+        var z = 10;
+
+        function a() {
+            var z = 15;
+            console.log(z);
+        }
+        console.log(z);
+        /* var z = 10 
+        no llama a funcion a
+        console.log(z) = console.log(10)
+        resp.:10 */
+
+        /*ejercicio 14 */
+        var z = 10;
+
+        function a() {
+            var z = 15;
+            console.log(z);
+        }
+        a();
+        console.log(z);
+        /*var z = 10
+        funcion a --- var z = 15 --- console.log(z) = console.log(15)
+        sale de la funcion e imprime console.log(z) inicial = console.log(10)
+        resp.: 15,10 */
+
+        /*ejercicio 15 */
+        var z = 10;
+
+        function a() {
+            var z = 15;
+            console.log(z);
+            return z;
+        }
+        z = a();
+        console.log(z);
+        /* variable inicial z = 10
+        funcion a que dará nuevo valor a z
+        en la funcion var z = 15 --- console.log(z) = console.log(15) --- retorna z =15
+        console.log(z) = console.log(15)
+        Resp.: 15,15 */
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
