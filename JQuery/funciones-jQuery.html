@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <title>jQuery2</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            //estructura base jQuery --> $('').accion(function(){});
+            //click
+            $('#boton1').click(function() {
+                alert("Click en el botón 1")
+            });
+            //hide
+            $('#boton2').click(function() {
+                $('#parrafo2').hide();
+            });
+            //show
+            $('#boton3').click(function() {
+                $('#parrafo2').show();
+            });
+            //toggle
+            $('#boton4').click(function() {
+                $('#parrafo2').toggle(); //oculta o muestra un elemento
+            });
+            //slideUp
+            $('#boton5').click(function() {
+                $('#parrafo3').slideUp(1000);
+            });
+            //slideDown
+            $('#boton6').click(function() {
+                $('#parrafo3').slideDown(1000);
+            });
+            //slideToggle
+            $('#boton7').click(function() {
+                $('#parrafo3').slideToggle(1000);
+            });
+            //fadeOut
+            $('#boton8').click(function() {
+                $('#parrafo4').fadeOut(2000);
+            });
+            //fadeIn
+            $('#boton9').click(function() {
+                $('#parrafo4').fadeIn(2000);
+            });
+            //addClass
+            $('#boton10').click(function() {
+                $('#parrafo5').addClass("bg-info");
+            });
+            //removeClass
+            $('#boton10-A').click(function() {
+                $('#parrafo5').removeClass("bg-info");
+            });
+            //before
+            $('#boton11').click(function() {
+                $('#parrafo6').before("hola<br>");
+            });
+            //after
+            $('#boton12').click(function() {
+                $('#parrafo6').after("<br>chao");
+            });
+            //append
+            $('#boton13').click(function() {
+                $('#parrafo6').append("<strong> ERROR</strong>");
+            });
+            //html
+            $('#boton14').click(function() {
+                $('#parrafo7').html("<strong>Hola!!!!</strong>");
+            });
+            //attr
+            $('#boton15').click(function() {
+                $('#parrafo7').attr();
+            });
+            //val
+            $('#boton16').click(function() {
+                $('#parrafo7').val();
+            });
+            //text
+            $('#boton17').click(function() {
+                $('#parrafo7').text("hola");
+            });
+            //fin JQuery
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container p-4 mt-3 bg-secondary text-light rounded-lg">
+        <h2>Función click</h2>
+        <p>Clikea el botón para llamar al evento click</p>
+        <button id="boton1">FUNCIÓN CLICK</button>
+        <hr>
+        <h2>Función hide/show/toggle</h2>
+        <p id="parrafo2">Clikea el botón para llamar el evento hide y ocultar el párrafo</p>
+        <button id="boton2">FUNCIÓN HIDE</button>
+        <button id="boton3">FUNCIÓN SHOW</button>
+        <button id="boton4">FUNCIÓN TOGGLE</button>
+        <hr>
+        <h2>Función slideDown/slideUp/slideToggle</h2>
+        <p id="parrafo3">Clikea el botón para hacer slide</p>
+        <button id="boton5">FUNCIÓN slideUp</button>
+        <button id="boton6">FUNCIÓN slideDown</button>
+        <button id="boton7">FUNCIÓN slideToggle</button>
+        <hr>
+        <h2>Función fadeOut/fadeIn</h2>
+        <p id="parrafo4">Clikea el botón para desvanecer</p>
+        <button id="boton8">FUNCIÓN fadeOut</button>
+        <button id="boton9">FUNCIÓN fadeIn</button>
+        <hr>
+        <h2>Función addClass/removeClass</h2>
+        <p id="parrafo5">Clikea el botón para añadir o quitar clase</p>
+        <button id="boton10">FUNCIÓN addClass</button>
+        <button id="boton10-A">FUNCIÓN removeClass</button>
+
+        <hr>
+        <h2>Función before/after/append</h2>
+        <p id="parrafo6">Clikea el botón para probar before/after/append</p>
+        <br>
+        <button id="boton11">FUNCIÓN BEFORE</button>
+        <button id="boton12">FUNCIÓN AFTER</button>
+        <button id="boton13">FUNCIÓN APPEND</button>
+        <hr>
+        <h2>Función html/attr/val/text</h2>
+        <p id="parrafo7">Clikea el botón para probar</p>
+        <button id="boton14">FUNCIÓN HTML</button>
+        <button id="boton15">FUNCIÓN ATTR</button>
+        <button id="boton16">FUNCIÓN VAL</button>
+        <button id="boton17">FUNCIÓN TEXT</button>
+        <hr>
+    </div>
+</body>
+
+</html>
