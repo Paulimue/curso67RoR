@@ -73,11 +73,26 @@
             });
             //attr
             $('#boton15').click(function() {
-                $('#parrafo7').attr();
+                $('#parrafo7').attr('style', 'color: yellow; font-size: 25px');
             });
             //val
             $('#boton16').click(function() {
-                $('#parrafo7').val();
+                //captura el valor como string
+                var texto1 = $('#text1').val();
+                var texto2 = $('#text2').val();
+
+                //validando si en un numero
+                if (isNaN(texto1)) {
+                    alert("No es un numero, despierta")
+                } else {
+
+                    //convertir a numero
+                    //Number(texto1); parseInt(texto1); parseFloat(texto1);
+                    alert(Number(texto1) + parseInt(texto1) + parseFloat(texto1));
+                    //alert(texto1 + texto2);
+
+                }
+
             });
             //text
             $('#boton17').click(function() {
