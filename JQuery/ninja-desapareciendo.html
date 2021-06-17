@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>::NinjaDog Desapareciendo ::</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            //estructura base jquery --> $('').accion(function(){});
+            //var nombre_imagenes = ['tux_ninja.png', 'tux.png', 'tux_ninja.png', 'tux.png', 'tux_ninja.png', 'tux.png', 'tux_ninja.png', 'tux.png'];
+            for (let i = 1; i <= 8; i++) {
+                $('#container').append('<img>');
+                $('img').attr('src', 'imagenes/ninja-dog.png');
+                //$('#container').append('<img src=tux' + i + '.png>');
+            }
+
+
+            $('img').attr('width', '200px');
+            $('img').attr('alt', 'ninja-dog');
+            $('img').attr('style', 'margin:10px');
+            $('img').css('border', '4px solid brown');
+
+            //agregando un boton a continuacion de las imagenes
+            $('#container').append('<br><button id=restaurar>Restaurar</button>');
+
+            //ocultar imagen
+            $('img').click(function() {
+                $(this).hide(2000);
+            });
+            //mostrar o restaurar imagenes
+            $('button').click(function() {
+                $('img').show(2000);
+            });
+
+
+            //fin JQuery
+        });
+    </script>
+    <style>
+        #container {
+            padding: 100px;
+            background-color: lightgrey;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+
+    </div>
+</body>
+
+</html>
