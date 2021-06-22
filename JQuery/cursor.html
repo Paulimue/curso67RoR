@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>::Cursor::</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $('document').ready(function() {
+            //estructura base jquery --> $('').accion(function(){});
+            /*for (let i = 0; i <= 4; i++) {
+                $('#container').append('<img src=img/ninja' + i + '.png alt-src=img/cat' + i + '.png>');
+            }*/
+            var temp = "";
+            $('img').hover(function() {
+                temp = $(this).attr('src');
+                $(this).attr('src', $(this).attr('alt-src'));
+            }, function() {
+                $(this).attr('src', temp);
+            });
+            //fin JQuery
+        });
+    </script>
+    <style>
+        #container {
+            padding: 50px;
+            background-color: lightgrey;
+            text-align: center;
+            display: inline-block;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="container">
+        <h1>::Toyota Land Cruiser FJ40::</h1>
+        <img src='img-cursor/FJ40-01.jpeg' alt-src='img-cursor/FJ40-02.jpeg' width="auto" height="240" />
+        <img src='img-cursor/FJ40-03.jpeg' alt-src='img-cursor/FJ40-04.jpeg' width="auto" height="240" />
+        <img src='img-cursor/FJ40-05.jpeg' alt-src='img-cursor/FJ40-06.jpeg' width="auto" height="240" />
+        <img src='img-cursor/FJ40-07.jpeg' alt-src='img-cursor/FJ40-08.jpeg' width="auto" height="240" />
+        <img src='img-cursor/FJ40-09.jpeg' alt-src='img-cursor/FJ40-10.jpeg' width="auto" height="240" />
+        <img src='img-cursor/FJ40-11.jpeg' alt-src='img-cursor/FJ40-12.jpeg' width="auto" height="240" />
+
+    </div>
+</body>
+
+</html>
