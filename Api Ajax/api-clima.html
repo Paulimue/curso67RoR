@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>::Api Clima::</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('button').click(function() {
+                var ciudad = $('#ciudad').val(); //obtener el valor del elemento (input) 
+                var url = 'https://api.openweathermap.org/data/2.5/weather?q=' + ciudad + '&appid=9a3c1b752b7c362097f022f8a88620aa';
+
+                $.get(url, function(dato) {
+                    console.dir(dato);
+                    $('#datos').html('');
+                    $('#datos').append('<p>' + dato.name + ': ' + dato.weather[0].description + '</p>');
+                    $('#datos').append('<p> Temperatura: ' + dato.main.temp + '</p>');
+                    $('#datos').append('<p> Coordenadas: Latitud ' + dato.coord.lat + ' / Longitud ' + dato.coord.lon + '</p>');
+
+                }, "json");
+
+            });
+
+        });
+    </script>
+    <style>
+        #body {
+            background-color: rgb(163, 161, 161);
+        }
+        
+        #container {
+            vertical-align: middle;
+            padding: 10px;
+            height: 250px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        
+        #cuadrocompleto {
+            margin: 50px auto;
+            text-align: center;
+            border: 3px solid #1E679A;
+            border-radius: 10px;
+            width: 400px;
+        }
+        
+        #cuadroingreso {
+            text-align: center;
+            background-color: #1E679A;
+            font-weight: bold;
+            color: #ffffff;
+            padding: 5px;
+        }
+        
+        #cuadrodatos {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body id="body">
+    <div id="container">
+        <div id=cuadrocompleto>
+            <div id=cuadroingreso>
+                <label for="ciudad">Ciudad:</label>
+                <input type="text" name="ciudad" id="ciudad" placeholder="ingrese ciudad">
+                <button>Consultar</button>
+            </div>
+            <div id=cuadrodatos></div>
+            <div id="datos"></div>
+        </div>
+    </div>
+</body>
+
+</html>
