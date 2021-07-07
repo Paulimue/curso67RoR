@@ -1,0 +1,114 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf600
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 use world;\
+\
+select * from cities;\
+select * from countries;\
+select * from languages;\
+\
+--  1.\'bfQu\'e9 consulta har\'edas para obtener todos los pa\'edses que hablan esloveno? \
+-- Tu consulta debe devolver el nombre del pa\'eds, el idioma y el porcentaje de idioma. \
+-- Tu consulta debe organizar el resultado por porcentaje de idioma en orden descendente\
+\
+select * from cities;\
+select * from countries;\
+select * from languages;\
+\
+select * from languages\
+WHERE language like '%loven%'\
+;\
+\
+select  countries.name, languages.language, languages.percentage\
+from languages\
+INNER JOIN countries ON countries.id= languages.country_id\
+WHERE -- language like '%loven%'\
+countries.id in (16,96,107,200)\
+order by languages.percentage desc\
+;\
+\
+\
+-- 2.\'bfQu\'e9 consulta ejecutar\'edas para mostrar el n\'famero total de ciudades para cada pa\'eds? \
+-- Su consulta debe devolver el nombre del pa\'eds y el n\'famero total de ciudades. \
+-- Tu consulta debe organizar el resultado por el n\'famero de ciudades en orden descendente\
+\
+select * from cities;\
+select * from countries;\
+\
+select countries.name pais, count(countries.name) total_ciudades from cities\
+INNER JOIN countries on countries.id = cities.country_id\
+group by countries.name\
+order by total_ciudades desc\
+;\
+\
+\
+\
+-- 3. \'bfQu\'e9 consulta har\'edas para obtener todas las ciudades de M\'e9xico con una poblaci\'f3n de m\'e1s de 500,000? \
+-- Tu consulta debe organizar el resultado por poblaci\'f3n en orden descendente.\
+\
+select * from cities;\
+select * from countries;\
+\
+select * from countries WHERE name LIKE '%xico'; -- id = 136\
+\
+select cities.name, cities.population from cities\
+INNER JOIN countries on countries.id = cities.country_id\
+where countries.id =136\
+and cities.population > 500000\
+order by cities.population desc;\
+\
+\
+-- 4. \'bfQu\'e9 consulta ejecutar\'edas para obtener todos los idiomas en cada pa\'eds con un porcentaje superior al 89%? \
+-- Tu consulta debe organizar el resultado por porcentaje en orden descendente.\
+\
+select countries.name, languages.language, languages.percentage from languages\
+INNER JOIN countries ON countries.id= languages.country_id\
+WHERE languages.percentage > 89\
+order by languages.percentage desc\
+;\
+\
+-- 5. \'bfQu\'e9 consulta har\'eda para obtener todos los pa\'edses con un \'e1rea de superficie inferior a 501 y una poblaci\'f3n superior a 100,000?\
+\
+select * from countries;\
+\
+select * from countries\
+WHERE surface_area < 501\
+and population > 100000\
+;\
+\
+-- 6.\'bfQu\'e9 consulta har\'edas para obtener pa\'edses con solo Monarqu\'eda Constitucional con un capital superior a 200 y una esperanza de vida superior a 75 a\'f1os?\
+\
+select * from countries; -- government_form = 'Constitutional Monarchy'; capital; life_expentancy\
+\
+select name, capital, life_expectancy from countries\
+where government_form = 'Constitutional Monarchy'\
+and capital > 200\
+and life_expectancy > 75\
+;\
+\
+-- 7. \'bfQu\'e9 consulta har\'edas para obtener todas las ciudades de Argentina dentro del distrito de Buenos Aires y tener una poblaci\'f3n superior a 500,000? \
+-- La consulta debe devolver el nombre del pa\'eds, el nombre de la ciudad, el distrito y la poblaci\'f3n\
+\
+select * from cities;\
+select * from countries;\
+\
+select * from countries WHERE name like '%tina'; -- id = 9\
+\
+select * from cities where country_id= 9 and population > 500000 and district = 'Buenos Aires';\
+\
+select countries.name pais, ct.name ciudad, ct.district distrito, ct.population poblacion from cities ct\
+INNER JOIN countries on countries.id = ct.country_id\
+where ct.country_id= 9 and ct.population > 500000 and ct.district = 'Buenos Aires';\
+\
+-- 8.\'bfQu\'e9 consulta har\'edas para resumir el n\'famero de pa\'edses en cada regi\'f3n? \
+-- La consulta debe mostrar el nombre de la regi\'f3n y el n\'famero de pa\'edses. \
+-- Adem\'e1s, la consulta debe organizar el resultado por el n\'famero de pa\'edses en orden descendente\
+\
+select region, count(region) numero_paises from countries\
+group by  region\
+order by numero_paises desc \
+;}
