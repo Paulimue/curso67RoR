@@ -1,0 +1,90 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf600
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Use amigos;\
+\
+select * from friendships;\
+select * from users;\
+\
+select * from users\
+left join friendships on users.id = friendships.user_id\
+left join users as user2 on friendships.friend_id = users.id;\
+\
+\
+-- 1.Devuelva a todos los usuarios que son amigos de Kermit, aseg\'farese de \
+-- que sus nombres se muestren en los resultados.\
+\
+select users.first_name AS usuario_nom, users.last_name AS usuario_ape,\
+user2.first_name AS amigo_nom, user2.last_name AS amigo_ape\
+FROM users\
+JOIN friendships ON users.id = friendships.user_id\
+JOIN users AS user2\
+ON friendships.friend_id = user2.id\
+WHERE friendships.friend_id = 4;\
+\
+\
+-- 2.Devuelve el recuento de todas las amistades.\
+\
+select users.first_name AS usuario_nom, users.last_name AS usuario_ape, user2.first_name AS amigo_nom,\
+user2.last_name AS amigo_ape\
+FROM users\
+JOIN friendships ON users.id = friendships.user_id\
+JOIN users AS user2\
+ON friendships.friend_id = user2.id;\
+\
+\
+-- 3.Descubre qui\'e9n tiene m\'e1s amigos y devuelve el recuento de sus amigos.\
+\
+SELECT friendships.user_id, users.first_name, users.last_name,\
+COUNT(friendships.friend_id) AS total_amigos \
+FROM users\
+JOIN friendships\
+ON users.id = friendships.user_id\
+GROUP BY friendships.user_id\
+ORDER BY users.first_name;\
+\
+\
+-- 4.Crea un nuevo usuario y hazlos amigos de Eli Byers, Kermit The Frog y Marky Mark.\
+\
+INSERT INTO users (first_name, last_name, created_at)\
+VALUES ("Luis", "Hernandez", NOW());\
+\
+INSERT INTO friendships (user_id, friend_id, created_at)\
+VALUES (6, 4, NOW());\
+\
+SELECT * FROM users\
+JOIN friendships\
+ON users.id = friendships.user_id\
+JOIN users AS user2\
+ON friendships.friend_id = user2.id;\
+\
+\
+-- 5.Devuelve a los amigos de Eli en orden alfab\'e9tico.\
+\
+SELECT user2.first_name, user2.last_name FROM users\
+JOIN friendships\
+ON users.id = friendships.user_id\
+JOIN users AS user2\
+ON friendships.friend_id = user2.id\
+WHERE users.id = 2 \
+ORDER BY user2.first_name;\
+\
+\
+-- 6.Eliminar a Marky Mark de los amigos de Eli.\
+\
+DELETE FROM friendships\
+WHERE user_id = 2 AND friend_id = 5;\
+\
+\
+-- 7.Devuelve todas las amistades, mostrando solo el nombre y apellido de ambos amigos.\
+\
+SELECT users.first_name AS Nombre, users.last_name AS Apellido, user2.first_name AS Nombre_amigo, user2.last_name AS Apellido_amigo\
+FROM users\
+JOIN friendships\
+ON users.id = friendships.user_id\
+JOIN users AS user2\
+ON friendships.friend_id = user2.id;}
