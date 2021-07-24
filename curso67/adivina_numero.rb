@@ -13,4 +13,4 @@ def adivina_numero valor
         puts "¡La suposición fue demasiado baja!"
     end
 end
-adivina_numero 28
+adivina_numero 29
