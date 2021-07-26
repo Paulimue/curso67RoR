@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos básicos 2</title>
+    <script>
+        /*EJERCICIO 13. Cambiar hacia el centro -  Dado un array, cambia el primer y último valor, el tercero con el ante penútimo, etc. 
+                        Ejemplo: cambiaHaciaElCentro([true, 42, “Ada”, 2, “pizza”]) cambia el array a [“pizza¨, 42, “Ada”, 2, true]. 
+                        cambiaHaciaElCentro([1,2,3,4,5,6]) cambia el array a [6,2,4,3,5,1]. No es necesario devolver (return) el array esta vez. */
+
+        function cambiaHaciaElCentro(array) { // ["pizza",42, "Ada", true]
+            //array.length = 5; array.length / 2.5
+            var temp = 0;
+            for (let i = 0; i < array.length / 2; i += 2) { //i=4
+                temp = array[i]; //temp = "Ada"
+                array[i] = array[array.length - (1 + i)]; //array[2]=array[2]
+                array[array.length - (1 + i)] = temp; //array[2]="Ada"
+            }
+            console.log(array);
+        }
+        cambiaHaciaElCentro([true, 42, "Ada", 2, "pizza"])
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
