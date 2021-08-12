@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fecha: 1
+  cliente: MyString
+  descuento: 1
+  monto: 1
+  cantidad: 1
+
+two:
+  fecha: 1
+  cliente: MyString
+  descuento: 1
+  monto: 1
+  cantidad: 1
