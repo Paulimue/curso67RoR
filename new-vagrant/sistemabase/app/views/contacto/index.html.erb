@@ -1,27 +1,25 @@
 <br><br>
 <div class="container max-width: 1280px">
     <h2 class="font-weight-bold" style= "color: #63EC89">CONTÁCTANOS</h2>
+<form>
+  <div class="form-row">
+    <div class="col-12 pr-4">
+      <input type="text" class="form-control" placeholder="Nombre">
+    </div>
     <br>
-    <%= form_for :post do |f| %>
-    <p class="text-muted">
-        <%= f.label :nombre %><br>
-        <%= f.text_field :title %>
-    </p>
-
-    <p class="text-muted">
-        <%= f.label :email %><br>
-        <%= f.text_field :title %>
-    </p>
-
-    <p class="text-muted">
-        <%= f.label :mensaje %><br>
-        <%= f.text_area :text %>
-    </p>
-
-    <p>
-        <%= f.submit :enviar %>
-    </p>
+    <div class="col-12 mt-3 pr-4">
+      <input type="text" class="form-control" placeholder="Apellido">
+    </div>
     <br>
-    <% end %>
-</div>
+    <div class="col-12 mt-3 pr-4">
+      <input type="email" class="form-control" placeholder="E-mail">
+    </div>
+    <br>
+    <div class="form-group col-12 mt-3 pr-4">
+        <textarea class="form-control" placeholder="Mensaje" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary col-1 pl-1">Enviar</button>
+  </div>
+</form>
 

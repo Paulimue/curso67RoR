@@ -21,24 +21,24 @@
                 <%= image_tag("logoHC.png", :class => "style_logo")%>
                 </a>
             </div>
-            <div class="col-md mt-4">
+            <div class="col-md mt-4 pt-2">
                 <nav class="nav nav justify-content-end">
                     <div class="nav-item" style="color: #63EC89">
                         <ul class="nav justify-content-end" >
                             <li class="nav-item active">
-                                <a class="nav-link" style= "color: #63EC89" href="http://localhost:3000/index">Home <span class="sr-only">(current)</span></a>
+                                <a class="nav-link" style= "color: #63EC89" href="http://localhost:3000/">Home <span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" style= "color: #63EC89" href="http://localhost:3000/impacto/index">Impacto Social & Ambiental</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" style= "color: #63EC89" href="http://localhost:3000/aprende/index">Aprende</a>
+                                <a class="nav-link" style= "color: #63EC89" href="http://localhost:3000/aprende/">Aprende</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" style= "color: #63EC89" href="http://localhost:3000/terapiahorticola/index">Terapia Hortícola</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" style= "color: #63EC89" href="#">Contacto</a>
+                                <a class="nav-link" style= "color: #63EC89" href="http://localhost:3000/contacto/">Contacto</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" style= "color: #63EC89" href="http://localhost:3000/tienda/index">Tienda</a>
@@ -67,9 +67,9 @@
       <footer>
         <hr size="1px" color="#63EC89"/>
           <div class="row justify-content-around mb-0 pt-1">
-              <div class="col-xl-2 col-md-2 order-xl-1 order-1 mr-xl-0 text-muted">
-                  <ul class="list-unstyled mt-md-2 mt-0 font-weight-bold">
-                      <li style= "color: #63EC89">Síguenos</li>
+              <div class="col-xl-2 col-md-2 order-1 text-muted">
+                  <ul class="list-unstyled">
+                      <li lass="mt-md-0 mt-0 font-weight-bold" style= "color: #63EC89">Síguenos</li>
                         <%= image_tag("fb.png", :class => "style_rrss")%>
                         <%= image_tag("ig.png", :class => "style_rrss")%>
                   </ul>
@@ -100,7 +100,9 @@
                       <li>Quienes Somos</li>
                       <li>Apoya causas ambientales</li>
                       <li>Recicla</li>
-                      <li>Contacto</li>
+                      <li class="link">
+                        <a class="link text-muted" href="http://localhost:3000/contacto/">Contacto</a>
+                      </li>
                   </ul>
               </div>
               <div class="col-xl-auto col-md-4 col-6 my-sm-0 order-6 text-muted">
