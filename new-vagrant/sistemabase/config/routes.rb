@@ -1,12 +1,18 @@
 Rails.application.routes.draw do
   #get 'contacto/index'
   get 'contacto' => "contacto#index"
+
   get 'suscripcion/index'
-  get 'tienda/index'
+  
+  #get 'tienda/index'
+  get 'tienda' => "tienda#index"
   #get 'aprende/index'
   get 'aprende' => "aprende#index"
-  get 'terapiahorticola/index'
-  get 'impacto/index'
+  #get 'terapiahorticola/index'
+  get 'terapiahorticola' => "terapiahorticola#index"
+  #get 'impacto/index'
+  get 'impacto' => "impacto#index"
+
   resources :venta
   resources :categoria
   resources :productos

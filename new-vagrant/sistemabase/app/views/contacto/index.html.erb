@@ -1,25 +1,35 @@
 <br><br>
 <div class="container max-width: 1280px">
-    <h2 class="font-weight-bold" style= "color: #63EC89">CONTÁCTANOS</h2>
+    <h2 class="titulo" style="color: #63EC89">CONTÁCTANOS</h2>
+</div>
+<br>
 <form>
   <div class="form-row">
-    <div class="col-12 pr-4">
-      <input type="text" class="form-control" placeholder="Nombre">
+    <div class="col-9 pl-12">
+        <div class="ml-8 pl-4 mr-4">
+        <input type="text" class="form-control" placeholder="Nombre">
+        </div>
+        <br>
+        <div class="ml-8 pl-4 mr-4">
+        <input type="text" class="form-control" placeholder="Apellido">
+        </div>
+        <br>
+        <div class="ml-8 pl-4 mr-4">
+        <input type="email" class="form-control" placeholder="E-mail">
+        </div>
+        <br>
+        <div class="form-group ml-8 pl-4 mr-4">
+            <textarea class="form-control" placeholder="Mensaje" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+        <br>
+        <div class="ml-8 pl-4 mr-4 text-dark font-weight-bold">
+        <button type="submit" class="btn" style="background-color: #63EC89">Enviar</button>
+        </div>
     </div>
-    <br>
-    <div class="col-12 mt-3 pr-4">
-      <input type="text" class="form-control" placeholder="Apellido">
+    <div class="ml-6">
+        <%= image_tag("contacto2.png", :class => "botella")%>
     </div>
-    <br>
-    <div class="col-12 mt-3 pr-4">
-      <input type="email" class="form-control" placeholder="E-mail">
-    </div>
-    <br>
-    <div class="form-group col-12 mt-3 pr-4">
-        <textarea class="form-control" placeholder="Mensaje" id="exampleFormControlTextarea1" rows="3"></textarea>
-    </div>
-    <br>
-    <button type="submit" class="btn btn-primary col-1 pl-1">Enviar</button>
   </div>
 </form>
+<br>
 
